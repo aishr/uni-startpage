@@ -24,12 +24,57 @@ $(document).ready(function(){
 });
 
 window.onkeydown = function (e) {
-    if (!e) e = window.event;
-    if (!e.metaKey) {
-        if(e.keyCode >= 65 && event.keyCode <= 90 || e.keyCode >= 48 && event.keyCode <= 57) {
+    e = e || window.event || {};
+    var charCode = e.charCode || e.keyCode || e.which;
+    if(charCode >= 65 && charCode <= 90 || charCode >= 48 && charCode <= 57) {
             $('#search').focus();
+    }
+}
+
+var config = [];
+
+var container = [
+    {key: "fb", url: "https://www.facebook.com/"},
+    {key: "m", url: "https://www.messenger.com"},
+    {key: "wa", url: "https://web.whatsapp.com/"},
+    {key: "i", url: "https://www.instagram.com/"},
+    {key: "yt", url: "https://www.youtube.com/", search: "results?search_query="},
+    {key: "t", url: "https://www.tumblr.com/"},
+    {key: "li", url: "https://www.linkedin.com/"},
+    {key: "gh", url: "https://github.com/", search: "search?q="},
+    {key: "gd", url: "https://drive.google.com/", search: "drive/search?q="},
+    {key: "gm", url: "https://mail.google.com/", search: "mail/u/0/#search/"},
+    {key: "tt", url: "https://www.twitter.com/"},
+    {key: "s", url: "https://play.spotify.com/"},
+    {key: "bb", url: "https://portal.utoronto.ca/"},
+    {key: "sl", url: "https://www.sharelatex.com/"},
+    {key: "a", url: "https://acorn.utoronto.ca/"},
+    {key: "utm", url: "https://mail.utoronto.ca/"},
+    {key: "tt", url: "https://student.utm.utoronto.ca/timetable/"},
+    {key: "pi", url: "https://piazza.com/"},
+    {key: "pey", url: "https://uoftengcareerportal.ca/students/login.htm"}
+];
+function get_url()
+{
+    var input = document.getElementById("search").value;
+    var test = goThroughOptions(input, config);
+    if (test != false) return test;
+    var test = goThroughOptions(input, container);
+    if (test != false) return test;
+    return "https://google.com/search?q=" + encodeURIComponent(input);
+}
+
+function goThroughOptions(input, lst){
+    var split = input.split(":")
+    for (var i = 0; i < lst.length; i++){
+        if (split[0] != input && split[0] === lst[i].key){
+            return lst[i].url + lst[i].search + encodeURIComponent(split[1])
+        }
+        if (input === lst[i].key){
+            return lst[i].url;
         }
     }
+    return false;
 }
 
 function clock() {// We create a new Date object and assign it to a variable called "time".
