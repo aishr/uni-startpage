@@ -31,35 +31,43 @@ window.onkeydown = function (e) {
     }
 }
 
-var config = [];
-
-var container = [
-    {key: "fb", url: "https://www.facebook.com/"},
-    {key: "m", url: "https://www.messenger.com"},
-    {key: "wa", url: "https://web.whatsapp.com/"},
-    {key: "i", url: "https://www.instagram.com/"},
-    {key: "yt", url: "https://www.youtube.com/", search: "results?search_query="},
-    {key: "t", url: "https://www.tumblr.com/"},
-    {key: "li", url: "https://www.linkedin.com/"},
-    {key: "gh", url: "https://github.com/", search: "search?q="},
-    {key: "gd", url: "https://drive.google.com/", search: "drive/search?q="},
-    {key: "gm", url: "https://mail.google.com/", search: "mail/u/0/#search/"},
-    {key: "tt", url: "https://www.twitter.com/"},
-    {key: "s", url: "https://play.spotify.com/"},
-    {key: "bb", url: "https://portal.utoronto.ca/"},
-    {key: "sl", url: "https://www.sharelatex.com/"},
-    {key: "a", url: "https://acorn.utoronto.ca/"},
-    {key: "utm", url: "https://mail.utoronto.ca/"},
-    {key: "tt", url: "https://student.utm.utoronto.ca/timetable/"},
-    {key: "pi", url: "https://piazza.com/"},
-    {key: "pey", url: "https://uoftengcareerportal.ca/students/login.htm"}
-];
+var config = {
+    links: [],
+    dock: [
+        {key: "fb", url: "https://www.facebook.com/"},
+        {key: "m", url: "https://www.messenger.com"},
+        {key: "wa", url: "https://web.whatsapp.com/"},
+        {key: "i", url: "https://www.instagram.com/"},
+        {key: "yt", url: "https://www.youtube.com/", search: "results?search_query="},
+        {key: "t", url: "https://www.tumblr.com/"},
+        {key: "li", url: "https://www.linkedin.com/"},
+        {key: "gh", url: "https://github.com/", search: "search?q="},
+        {key: "gd", url: "https://drive.google.com/", search: "drive/search?q="},
+        {key: "gm", url: "https://mail.google.com/", search: "mail/u/0/#search/"},
+        {key: "tt", url: "https://www.twitter.com/"},
+        {key: "s", url: "https://play.spotify.com/"},
+        {key: "bb", url: "https://portal.utoronto.ca/"},
+        {key: "sl", url: "https://www.sharelatex.com/"},
+        {key: "a", url: "https://acorn.utoronto.ca/"},
+        {key: "utm", url: "https://mail.utoronto.ca/"},
+        {key: "tt", url: "https://student.utm.utoronto.ca/timetable/"},
+        {key: "pi", url: "https://piazza.com/"},
+        {key: "pey", url: "https://uoftengcareerportal.ca/students/login.htm"}
+    ],
+    extras: {
+        urlRegex: /^(?:(http|https)?:\/\/)?(?:[\w-]+\.)+([a-z]|[A-Z]|[0-9]){2,6}/i,
+        protocolRegex: /^[a-zA-Z]+:\/\//i
+    }
+};
 function get_url()
 {
     var input = document.getElementById("search").value;
-    var test = goThroughOptions(input, config);
+    if (input.match(config.extras.urlRegex)){
+        return input.match(config.extras.protocolRegex) ? input : "http://" + input;
+    }
+    var test = goThroughOptions(input, config.links);
     if (test != false) return test;
-    var test = goThroughOptions(input, container);
+    var test = goThroughOptions(input, config.dock);
     if (test != false) return test;
     return "https://google.com/search?q=" + encodeURIComponent(input);
 }
