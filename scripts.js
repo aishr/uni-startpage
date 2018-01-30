@@ -11,11 +11,6 @@ $(document).ready(function(){
 	});
 });
 		
-function get_url()
-{
-    return "https://google.com/search?q=" + encodeURIComponent(document.getElementById("search").value);
-}
-
 $(document).ready(function(){
     $('#TextBoxId').keypress(function(e){
       if(e.keyCode==13)
@@ -50,7 +45,7 @@ var config = {
         {key: "sl", url: "https://www.sharelatex.com/"},
         {key: "a", url: "https://acorn.utoronto.ca/"},
         {key: "utm", url: "https://mail.utoronto.ca/"},
-        {key: "tt", url: "https://student.utm.utoronto.ca/timetable/"},
+        {key: "utt", url: "https://student.utm.utoronto.ca/timetable/"},
         {key: "pi", url: "https://piazza.com/"},
         {key: "pey", url: "https://uoftengcareerportal.ca/students/login.htm"}
     ],
