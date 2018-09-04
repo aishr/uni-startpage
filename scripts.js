@@ -29,7 +29,7 @@ window.onkeydown = function (e) {
 var config = {
     links: [
         {key: "marks", url: "https://docs.google.com/spreadsheets/d/1xVwISSWXJJKRenIa2uEx2CcAih7aZF1dAVuTif9UvTs/edit?usp=sharing"},
-        {key: "333", url: "#"},
+        {key: "333", url: "https://q.utoronto.ca/courses/51074"},
         {key: "411", url: "http://www.cs.toronto.edu/~bonner/courses/2018f/csc411/"},
         {key: "406", url: "https://www.math.toronto.edu/ilia/Teaching/MAT406.2018/index.html"},
         {key: "406q", url: "https://q.utoronto.ca/courses/57364"},
