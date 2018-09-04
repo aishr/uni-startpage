@@ -133,20 +133,26 @@ div#dockContainer {
         left: 50%;
         transform:translate(-50%, 0%);
 }
+
 .listdiv {
-        width: 200px;
+        width: 300px;
         margin: 30px;
+        display: inline-block;
+        vertical-align: top;
 }
+
 .marks {
         position:absolute;
         bottom: 0%;
-left: 0%
+        left: 0%
 }
+
 .source {
         position: absolute;
         bottom: 0%;
         right: 0%;
 }
+
 h2 {
         font: 400 45px/1.5 Helvetica, Verdana, sans-serif;
         margin: 0;
@@ -167,10 +173,6 @@ h2 {
         color: white;
 }
 
-.underli a{
-        color:white;
-}
-
 .topli:last-child {
         border: none;
         color: white;
@@ -185,20 +187,28 @@ h2 {
         -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
         transition: font-size 0.3s ease, background-color 0.3s ease;
         display: block;
-        width: 200px;
 }
+
 .topli a:hover{
         font-size: 40px;
 }	
 
-.underul{
+.underul {
         list-style-type: none;
         display: none;
         font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
 }
 
-.topul:hover .underul {
+.topli:hover .underul {
         display: block;
+}
+
+.underli a {
+        color:white;
+}
+
+.underli a:hover {
+    font-size: 25px;
 }
 
 .wrap {

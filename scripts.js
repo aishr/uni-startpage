@@ -27,7 +27,20 @@ window.onkeydown = function (e) {
 }
 
 var config = {
-    links: [],
+    links: [
+        {key: "marks", url: "https://docs.google.com/spreadsheets/d/1xVwISSWXJJKRenIa2uEx2CcAih7aZF1dAVuTif9UvTs/edit?usp=sharing"},
+        {key: "333", url: "#"},
+        {key: "411", url: "http://www.cs.toronto.edu/~bonner/courses/2018f/csc411/"},
+        {key: "406", url: "https://www.math.toronto.edu/ilia/Teaching/MAT406.2018/index.html"},
+        {key: "406q", url: "https://q.utoronto.ca/courses/57364"},
+        {key: "236", url: "https://mcs.utm.utoronto.ca/~236/"},
+        {key: "236m", url: "https://mcsmark.utm.utoronto.ca/csc236f18"},
+        {key: "236p", url: "https://piazza.com/class/jl55psb97m54hb"},
+        {key: "324", url: "https://mcs.utm.utoronto.ca/~324/"},
+        {key: "324", url: "#"},
+        {key: "324db", url: "#"},
+        {key: "102", url: "https://q.utoronto.ca/courses/56143"}
+    ],
     dock: [
         {key: "fb", url: "https://www.facebook.com/"},
         {key: "m", url: "https://www.messenger.com"},
