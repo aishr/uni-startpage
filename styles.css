@@ -1,7 +1,7 @@
 
 html {
 	background: url(images/cat6.jpg) no-repeat center center fixed;
-	background-size: 100% auto;
+	background-size: cover;
 	background-repeat: repeat-y;
 	background-color: #000000;
 }
