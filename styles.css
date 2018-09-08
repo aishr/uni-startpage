@@ -195,12 +195,8 @@ h2 {
 
 .underul {
         list-style-type: none;
-        display: none;
-        font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
-}
-
-.topli:hover .underul {
         display: block;
+        font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
 }
 
 .underli a {
