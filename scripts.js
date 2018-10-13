@@ -57,7 +57,7 @@ var config = {
         {key: "tt", url: "https://www.twitter.com/"},
         {key: "s", url: "https://play.spotify.com/"},
         {key: "bb", url: "https://portal.utoronto.ca/"},
-        {key: "sl", url: "https://www.sharelatex.com/"},
+        {key: "ol", url: "https://www.overleaf.com/"},
         {key: "a", url: "https://acorn.utoronto.ca/"},
         {key: "utm", url: "https://mail.utoronto.ca/"},
         {key: "utt", url: "https://student.utm.utoronto.ca/timetable/"},
