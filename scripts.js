@@ -37,8 +37,8 @@ var config = {
         {key: "236m", url: "https://mcsmark.utm.utoronto.ca/csc236f18"},
         {key: "236p", url: "https://piazza.com/class/jl55psb97m54hb"},
         {key: "324", url: "https://mcs.utm.utoronto.ca/~324/"},
-        {key: "324", url: "#"},
-        {key: "324db", url: "#"},
+        {key: "324m", url: "https://mcsmark.utm.utoronto.ca/csc324f18/"},
+        {key: "324db", url: "https://mcs.utm.utoronto.ca/~mybb/utmcs2/forumdisplay.php?fid=8"},
         {key: "102", url: "https://q.utoronto.ca/courses/56143"}
     ],
     dock: [
