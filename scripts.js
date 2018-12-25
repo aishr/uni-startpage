@@ -62,7 +62,7 @@ var config = {
         {key: "utm", url: "https://mail.utoronto.ca/"},
         {key: "utt", url: "https://student.utm.utoronto.ca/timetable/"},
         {key: "pi", url: "https://piazza.com/"},
-        {key: "pey", url: "https://uoftengcareerportal.ca/students/login.htm"}
+        {key: "slu", url: "https://utmpeople.slack.com/"}
     ],
     extras: {
         urlRegex: /^(?:(http|https)?:\/\/)?(?:[\w-]+\.)+([a-z]|[A-Z]|[0-9]){2,6}/i,
