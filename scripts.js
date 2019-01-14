@@ -29,18 +29,21 @@ window.onkeydown = function (e) {
 var config = {
     links: [
         {key: "marks", url: "https://docs.google.com/spreadsheets/d/1xVwISSWXJJKRenIa2uEx2CcAih7aZF1dAVuTif9UvTs/edit?usp=sharing"},
-        {key: "333", url: "https://q.utoronto.ca/courses/51074"},
-        {key: "411", url: "http://www.cs.toronto.edu/~bonner/courses/2018f/csc411/"},
-        {key: "406", url: "https://www.math.toronto.edu/ilia/Teaching/MAT406.2018/index.html"},
-        {key: "406q", url: "https://q.utoronto.ca/courses/57364"},
-        {key: "236", url: "https://mcs.utm.utoronto.ca/~236/"},
-        {key: "236m", url: "https://mcsmark.utm.utoronto.ca/csc236f18"},
-        {key: "236p", url: "https://piazza.com/class/jl55psb97m54hb"},
-        {key: "324", url: "https://mcs.utm.utoronto.ca/~324/"},
-        {key: "324m", url: "https://mcsmark.utm.utoronto.ca/csc324f18/"},
-        {key: "324db", url: "https://mcs.utm.utoronto.ca/~mybb/utmcs2/forumdisplay.php?fid=8"},
-        {key: "102", url: "https://q.utoronto.ca/courses/56143"}
-    ],
+        {key: "309", url: "http://www.cs.toronto.edu/~arnold/309/19s/"},
+        {key: "363", url: "http://www.vincentmaccio.com/csc363_2018/index.html"},
+        {key: "490", url: "https://q.utoronto.ca/courses/70067"},
+        {key: "492", url: "https://utmpeople.slack.com/"},
+        {key: "258", url: "http://www.cs.toronto.edu/~ylzhang/csc258/"},
+        {key: "258m", url: "https://mcsmark.utm.utoronto.ca/csc258s19/"},
+        {key: "258db", url: "https://mcs.utm.utoronto.ca/~mybb/utmcs2/forumdisplay.php?fid=32"},
+        {key: "358", url: "http://www.cs.toronto.edu/~ylzhang/csc358/"},
+        {key: "358m", url: "https://mcsmark.utm.utoronto.ca/csc358s19/"},
+        {key: "358db", url: "https://mcs.utm.utoronto.ca/~mybb/utmcs2/forumdisplay.php?fid=33"},
+        {key: "224", url: "https://q.utoronto.ca/courses/75580/gradebook"},
+        {key: "224a", url: "https://q.utoronto.ca/courses/75568"},
+        {key: "224b", url: "https://q.utoronto.ca/courses/75573"},
+        {key: "224c", url: "https://q.utoronto.ca/courses/84106"}
+ ],
     dock: [
         {key: "fb", url: "https://www.facebook.com/"},
         {key: "m", url: "https://www.messenger.com"},
@@ -62,7 +65,6 @@ var config = {
         {key: "utm", url: "https://mail.utoronto.ca/"},
         {key: "utt", url: "https://student.utm.utoronto.ca/timetable/"},
         {key: "pi", url: "https://piazza.com/"},
-        {key: "slu", url: "https://utmpeople.slack.com/"}
     ],
     extras: {
         urlRegex: /^(?:(http|https)?:\/\/)?(?:[\w-]+\.)+([a-z]|[A-Z]|[0-9]){2,6}/i,
