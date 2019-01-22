@@ -42,10 +42,7 @@ var config = {
         {key: "358m", url: "https://mcsmark.utm.utoronto.ca/csc358s19/"},
         {key: "358db", url: "https://mcs.utm.utoronto.ca/~mybb/utmcs2/forumdisplay.php?fid=33"},
         {key: "358s", url: "https://358w19.slack.com/"},
-        {key: "224", url: "https://q.utoronto.ca/courses/75580/gradebook"},
-        {key: "224a", url: "https://q.utoronto.ca/courses/75568"},
-        {key: "224b", url: "https://q.utoronto.ca/courses/75573"},
-        {key: "224c", url: "https://q.utoronto.ca/courses/84106"}
+        {key: "224", url: "https://q.utoronto.ca/courses/84106"}
  ],
     dock: [
         {key: "fb", url: "https://www.facebook.com/"},
