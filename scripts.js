@@ -35,6 +35,7 @@ var config = {
         {key: "490", url: "https://q.utoronto.ca/courses/70067"},
         {key: "490s", url: "https://csc490-w19.slack.com/"},
         {key: "492", url: "https://utmpeople.slack.com/"},
+        {key: "301", url: "https://mcs.utm.utoronto.ca/~301/"},
         {key: "258", url: "http://www.cs.toronto.edu/~ylzhang/csc258/"},
         {key: "258m", url: "https://mcsmark.utm.utoronto.ca/csc258s19/"},
         {key: "258db", url: "https://mcs.utm.utoronto.ca/~mybb/utmcs2/forumdisplay.php?fid=32"},
