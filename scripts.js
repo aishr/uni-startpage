@@ -67,6 +67,7 @@ var config = {
         {key: "utm", url: "https://mail.utoronto.ca/"},
         {key: "uwm", url: "https://connect.uwaterloo.ca/"},
         {key: "pi", url: "https://piazza.com/"},
+        {key: "atp", url: "https://portal.accommod8u.com/tp_acc/Login.php"}
     ],
     extras: {
         urlRegex: /^(?:(http|https)?:\/\/)?(?:[\w-]+\.)+([a-z]|[A-Z]|[0-9]){2,6}/i,
