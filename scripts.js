@@ -29,22 +29,8 @@ window.onkeydown = function (e) {
 var config = {
     links: [
         {key: "marks", url: "https://docs.google.com/spreadsheets/d/1xVwISSWXJJKRenIa2uEx2CcAih7aZF1dAVuTif9UvTs/edit?usp=sharing"},
-        {key: "309", url: "http://www.cs.toronto.edu/~arnold/309/19s/"},
-        {key: "309db", url: "https://mcs.utm.utoronto.ca/~mybb/utmcs2/forumdisplay.php?fid=63"},
-        {key: "363", url: "http://www.vincentmaccio.com/csc363_2019/"},
-        {key: "490", url: "https://q.utoronto.ca/courses/70067"},
-        {key: "490s", url: "https://csc490-w19.slack.com/"},
-        {key: "492", url: "https://utmpeople.slack.com/"},
-        {key: "301", url: "https://mcs.utm.utoronto.ca/~301/"},
-        {key: "258", url: "http://www.cs.toronto.edu/~ylzhang/csc258/"},
-        {key: "258m", url: "https://mcsmark.utm.utoronto.ca/csc258s19/"},
-        {key: "258db", url: "https://mcs.utm.utoronto.ca/~mybb/utmcs2/forumdisplay.php?fid=32"},
-        {key: "258s", url: "https://csc258h5s19.slack.com/"},
-        {key: "358", url: "http://www.cs.toronto.edu/~ylzhang/csc358/"},
-        {key: "358m", url: "https://mcsmark.utm.utoronto.ca/csc358s19/"},
-        {key: "358db", url: "https://mcs.utm.utoronto.ca/~mybb/utmcs2/forumdisplay.php?fid=33"},
-        {key: "358s", url: "https://358w19.slack.com/"},
-        {key: "224", url: "https://q.utoronto.ca/courses/84106"}
+        {key: "750", url: "https://ece.uwaterloo.ca/~agurfink/ece750t29"},
+        {key: "745", url: ""}
  ],
     dock: [
         {key: "fb", url: "https://www.facebook.com/"},
@@ -67,7 +53,8 @@ var config = {
         {key: "utm", url: "https://mail.utoronto.ca/"},
         {key: "uwm", url: "https://connect.uwaterloo.ca/"},
         {key: "pi", url: "https://piazza.com/"},
-        {key: "atp", url: "https://portal.accommod8u.com/tp_acc/Login.php"}
+        {key: "atp", url: "https://portal.accommod8u.com/tp_acc/Login.php"},
+        {key: "l", url: "https://learn.uwaterloo.ca"}
     ],
     extras: {
         urlRegex: /^(?:(http|https)?:\/\/)?(?:[\w-]+\.)+([a-z]|[A-Z]|[0-9]){2,6}/i,
