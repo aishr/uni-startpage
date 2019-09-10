@@ -30,7 +30,7 @@ var config = {
     links: [
         {key: "marks", url: "https://docs.google.com/spreadsheets/d/1xVwISSWXJJKRenIa2uEx2CcAih7aZF1dAVuTif9UvTs/edit?usp=sharing"},
         {key: "750", url: "https://ece.uwaterloo.ca/~agurfink/ece750t29"},
-        {key: "745", url: ""}
+        {key: "745", url: "https://cs.uwaterloo.ca/~trefler/cs745F2019/cs745Fall2019.html"}
  ],
     dock: [
         {key: "fb", url: "https://www.facebook.com/"},
