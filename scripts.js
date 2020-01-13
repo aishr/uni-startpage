@@ -31,6 +31,7 @@ var config = {
         {key: "marks", url: "https://docs.google.com/spreadsheets/d/1xVwISSWXJJKRenIa2uEx2CcAih7aZF1dAVuTif9UvTs/edit?usp=sharing"},
         {key: "889", url: "https://docs.google.com/document/d/1_NSffitWxfZMYxGgjmwFhHT5aFVwRnxd7OSQsPquZLA/edit"},
         {key: "848", url: "https://cormack.uwaterloo.ca/cs848/"},
+        {key: "res", url: "https://cormack.uwaterloo.ca/cs848/results/"},
         {key: "cal", url: "https://cormack.uwaterloo.ca/cal/"},
         {key: "492", url: "https://www.student.cs.uwaterloo.ca/~cs492/"}
  ],
