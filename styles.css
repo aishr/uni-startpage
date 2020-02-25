@@ -243,7 +243,7 @@ input[type="text"]:focus {
         border-bottom: 1px solid #FFF;
         cursor: text;
 }
-input[type="submit"] {
+input[type="search"] {
         height: 67px;
         width: 63px;
         display: inline-block;
@@ -256,6 +256,30 @@ input[type="submit"] {
         position: absolute;
         top: 0;
         right: 0;
+        z-index: 2;
+        cursor: pointer;
+        opacity: 0.4;
+        cursor: pointer;
+        transition: opacity .4s ease;
+}
+
+input[type="search"]:hover {
+        opacity: 0.8;
+}
+
+input[type="submit"] {
+        height: 67px;
+        width: 63px;
+        display: inline-block;
+        color:red;
+        float: right;
+        background: url(images/arrow.png) center center no-repeat;
+        background-size: 80% auto;
+        text-indent: -10000px;
+        border: none;
+        position: absolute;
+        top: 0;
+        right: 467px;
         z-index: 2;
         cursor: pointer;
         opacity: 0.4;
