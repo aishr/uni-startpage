@@ -29,13 +29,9 @@ window.onkeydown = function (e) {
 var config = {
     links: [
         {key: "marks", url: "https://docs.google.com/spreadsheets/d/1xVwISSWXJJKRenIa2uEx2CcAih7aZF1dAVuTif9UvTs/edit?usp=sharing"},
-        {key: "889", url: "https://docs.google.com/document/d/1_NSffitWxfZMYxGgjmwFhHT5aFVwRnxd7OSQsPquZLA/edit"},
-        {key: "889l", url: "https://uwaterloo.webex.com/meet/jianzhao"},
-        {key: "889d", url: "https://drive.google.com/drive/u/1/folders/1uZfotSR2LxOjjiTqKQk-EMom0Swnk0OX"},
-        {key: "848", url: "https://cormack.uwaterloo.ca/cs848/"},
-        {key: "848s", url: "https://cormack.uwaterloo.ca/submit/"},
-        {key: "848l", url: "https://georgetown.zoom.us/j/2128618097"},
-        {key: "492", url: "https://www.student.cs.uwaterloo.ca/~cs492/"}
+        {key: "463", url: "https://www.student.cs.uwaterloo.ca/~se463/"},
+        {key: "463cw", url: "https://campuswire.com/c/G6A5F90C2/"},
+        {key: "463pi", url: "https://piazza.com/class/k9ta27cqmme6dn"}
  ],
     dock: [
         {key: "fb", url: "https://www.facebook.com/"},
