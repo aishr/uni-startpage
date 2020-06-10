@@ -1,3 +1,4 @@
+
 $(document).ready(function(){
 	$("ul.osx-dock li").each(function (type) {
 		$(this).hover(function () {
@@ -18,6 +19,10 @@ $(document).ready(function(){
     });
 });
 
+$(document).ready(function() {
+    changeBackground();
+});
+
 window.onkeydown = function (e) {
     e = e || window.event || {};
     var charCode = e.charCode || e.keyCode || e.which;
@@ -25,6 +30,7 @@ window.onkeydown = function (e) {
             $('#search').focus();
     }
 }
+
 
 var config = {
     links: [
@@ -141,3 +147,13 @@ function getDate()
     document.getElementById('year').innerHTML = year;
 }
 setInterval(getDate, 1000);
+
+function getRandomInt(max) {
+    return (Math.floor(Math.random() * Math.floor(max))) + 1;
+}
+
+function changeBackground() {
+    var maxBackground = 35;
+    var image = "url(images/backgrounds/cat" + getRandomInt(maxBackground) + ".jpg)";
+    document.documentElement.style.backgroundImage = image; 
+}
