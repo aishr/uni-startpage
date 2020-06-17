@@ -153,7 +153,7 @@ function getRandomInt(max) {
 }
 
 function changeBackground() {
-    var maxBackground = 35;
+    var maxBackground = 50;
     var image = "url(images/backgrounds/cat" + getRandomInt(maxBackground) + ".jpg)";
     document.documentElement.style.backgroundImage = image; 
 }
