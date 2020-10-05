@@ -63,6 +63,7 @@ var config = {
         {key: "uwm", url: "https://connect.uwaterloo.ca/"},
         {key: "pi", url: "https://piazza.com/"},
         {key: "atp", url: "https://portal.accommod8u.com/tp_acc/Login.php"},
+        {key: "aws", url: "https://console.aws.amazon.com/console/home"},
         {key: "l", url: "https://learn.uwaterloo.ca"}
     ],
     extras: {
