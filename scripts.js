@@ -52,6 +52,7 @@ var config = {
         {key: "tci", url: "https://travis-ci.com/", search: "search/"},
         {key: "gd", url: "https://drive.google.com/", search: "drive/search?q="},
         {key: "gm", url: "https://mail.google.com/", search: "mail/u/0/#search/"},
+        {key: "gc", url: "https://calendar.google.com/"},
         {key: "an", url: "https://notebooks.azure.com/"},
         {key: "tt", url: "https://www.twitter.com/"},
         {key: "s", url: "https://play.spotify.com/"},
