@@ -46,6 +46,7 @@ var config = {
         {key: "i", url: "https://www.instagram.com/"},
         {key: "yt", url: "https://www.youtube.com/", search: "results?search_query="},
         {key: "pl", url: "https://app.plex.tv", search: "#!/search?query="},
+        {key: "dh", url: "https://hub.docker.com", search: "/search?q="},
         {key: "t", url: "https://www.tumblr.com/"},
         {key: "li", url: "https://www.linkedin.com/"},
         {key: "gh", url: "https://github.com/", search: "search?q="},
