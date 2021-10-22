@@ -1,73 +1,13 @@
 <!DOCTYPE html>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="scripts.js"></script>
-<html>
+<html lang="en">
   <head>
-    <title>Startpage</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
   </head>
   <body>
-    <div class="marks">
-      <a href="https://docs.google.com/spreadsheets/d/1xVwISSWXJJKRenIa2uEx2CcAih7aZF1dAVuTif9UvTs/edit?usp=sharing">
-        <img title="Marks" src="images/trollface.png" alt="marks" align="left" style="width:20px;height:20px;">
-      </a>
-    </div>
-    <!--
-    <div class="listdiv">
-      <h2>TAing</h2>
-      <ul class="topul">
-        <li class="topli">
-            <a href="https://www.student.cs.uwaterloo.ca/~se463/"><div class="textLabels">463</div>CS 463</a>
-            <ul class="underul">
-               <li class="underli">
-                 <a href="https://campuswire.com/c/G6A5F90C2/"><div class="textLabels">463cw</div>Campuswire</a>
-               </li>
-               <li class="underli">
-                 <a href="https://piazza.com/class/k9ta27cqmme6dn"><div class="textLabels">463pi</div>Piazza</a>
-               </li>
-            </ul>
-        </li>
-      </ul>
-    </div>
-    -->
-    <div class="wrap">
-      <form onsubmit="window.location.href = get_url(); return false;" autocomplete="on">
-        <input id="search" name="search" type="text" placeholder="Search Here!">
-        <input id="search_submit" value="Search" type="search">
-        <input id="submit" value="Submit" type="submit">
-      </form>
-    </div>
-    <time class="clock"></time>
-    <div class="box">
-      <div class="date">
-        <div id="daymonth"></div>
-        <div id="year"></div>
-      </div>
-    </div>
-    <div id="dockContainer">
-      <ul class="osx-dock">
-        <li class="active"><a href="https://www.facebook.com/"> <img title="Facebook" src="images/fblogo.png" alt="fb" align="left" style="width:50px;height:50px;"> <div class="centered">fb</div></a></li>
-        <li><a href="https://www.messenger.com"> <img title="Messenger" src="images/msngrlogo.png" alt="m" align="left" style="width:50px;height:50px;"> <div class="centered">m</div></a></li>
-        <li><a href="https://app.plex.tv"> <img title="Plex" src="images/plex.png" alt="pl" align="left" style="width:50px;height:50px;"> <div class="centered">pl</div></a></li>
-        <li><a href="https://web.whatsapp.com/"> <img title="Whatsapp" src="images/whatsapp.png" alt="wa" align="left" style="width:50px;height:50px;"><div class="centered">wa</div></a></li>
-        <li><a href="https://www.youtube.com/"> <img title="YouTube" src="images/ytlogo.png" alt="yt" align="left" style="width:50px;height:50px;"><div class="centered">yt</div></a></li>
-        <li><a href="https://www.linkedin.com"> <img title="LinkedIn" src="images/linkedinlogo.png" alt="li" align="left" style="width:50px;height:50px;"><div class="centered">li</div></a></li>
-        <li><a href="https://github.com/"> <img title="Github" src="images/githublogo.png" alt="gh" align="left" style="width:50px;height:50px;"><div class="centered">gh</div></a></li>
-        <li><a href="https://travis-ci.com/"> <img title="Travis" src="images/travislogo.png" alt="tci" align="left" style="width:50px;height:50px;"><div class="centered">tci</div></a></li>
-        <li><a href="https://drive.google.com/"> <img title="Drive" src="images/drivelogo.png" alt="gd" align="left" style="width:50px;height:50px;"><div class="centered">gd</div></a></li>
-        <li><a href="https://mail.google.com/"> <img title="Gmail" src="images/gmaillogo.png" alt="gm" align="left" style="width:50px;height:50px;"><div class="centered">gm</div></a></li>
-        <li><a href="https://calendar.google.com"> <img title="Google Calendar" src="images/calendar.png" alt="gc" align="left" style="width:50px;height:50px;"><div class="centered">gc</div></a></li>
-        <li><a href="https://notebooks.azure.com/"> <img title="Azure Notebooks" src="images/notebooks.png" alt="an" align="left" style="width:50px;height:50px;"><div class="centered">an</div></a></li>
-        <li><a href="https://connect.uwaterloo.ca/"> <img title="UWMail" src="images/mail.png" alt="uwm" align="left" style="width:50px;height:50px;"><div class="centered">uwm</div></a></li>
-        <li><a href="https://quest.pecs.uwaterloo.ca/psp/SS/ACADEMIC/SA/?cmd=login"> <img title="Quest" src="images/uwaterloo.png" alt="q" align="left" style="width:50px;height:50px;"><div class="centered">q</div></a></li>
-        <li><a href="https://learn.uwaterloo.ca"> <img title="Learn" src="images/learnlogo.png" alt="l" align="left" style="width:50px;height:50px;"><div class="centered">l</div></a></li>
-        <li><a href="https://www.overleaf.com/"> <img title="OverLeaf" src="images/ollogo.png" alt="ol" align="left" style="width:50px;height:50px;"><div class="centered">ol</div></a></li>
-        <li><a href="https://acorn.utoronto.ca/"> <img title="Acorn" src="images/acornlogo.png" alt="a" align="left" style="width:50px;height:50px;"><div class="centered">a</div></a></li>
-        <li><a href="https://mail.utoronto.ca/"> <img title="UTORMail" src="images/mail.png" alt="utm" align="left" style="width:50px;height:50px;"><div class="centered">utm</div></a></li>
-        <li><a href="https://portal.accommod8u.com/tp_acc/Login.php"> <img title="Accommod8u Tenant Portal" src="images/accommod8u.png" alt="atp" align="left" style="width:50px;height:50px;"><div class="centered">atp</div></a></li>
-        <li><a href="https://console.aws.amazon.com/console/home"> <img title="Amazon Web Services" src="images/awslogo.png" alt="aws" align="left" style="width:50px;height:50px;"><div class="centered">aws</div></a></li>
-        <li><a href="https://hub.docker.com"> <img title="Docker Hub" src="images/docker-hub.png" alt="dh" align="left" style="width:50px;height:50px;"><div class="centered">dh</div></a></li>
-      </ul>
-    </div>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
