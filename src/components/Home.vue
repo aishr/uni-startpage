@@ -1,20 +1,35 @@
 <script setup lang="ts">
+import MarksVue from './Marks.vue';
+import DockVue from './Dock.vue';
+import TimeAndDay from './TimeAndDay.vue';
 function getRandomInt(max:number) {
     return (Math.floor(Math.random() * Math.floor(max))) + 1;
 }
 let maxBackground:number = 50;
-let --image: string = "url(./src/assets/backgrounds/cat" + getRandomInt(maxBackground) + ".jpg)";
+var image: string = `url(/src/assets/backgrounds/cat${getRandomInt(maxBackground)}.jpg)`;
 </script>
 
 <template>
-  <div class="marks">
-    <a href="https://docs.google.com/spreadsheets/d/1xVwISSWXJJKRenIa2uEx2CcAih7aZF1dAVuTif9UvTs/edit?usp=sharing">
-      <img className="troll" title="Marks" src="./../assets/trollface.png" alt="marks"/>
-    </a>
-  </div>
+  <div class="bg" :style="{'background-image':image}"></div>
+  <MarksVue/>
+  <DockVue/>
+  <TimeAndDay/>
 </template>
 
 <style lang="scss">
+body, html, #app {
+  height: 100%;
+  margin: 0;
+}
+.bg {
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .troll {
   width: 20px;
   height: 20px;
@@ -23,12 +38,5 @@ let --image: string = "url(./src/assets/backgrounds/cat" + getRandomInt(maxBackg
   position: absolute;
   bottom: 0%;
   left: 0%;
-}
-html {
-  background-image:;
-	background: no-repeat center center fixed;
-	background-size: cover;
-	background-repeat: repeat-y;
-	background-color: #000000;
 }
 </style>
