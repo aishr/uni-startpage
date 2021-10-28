@@ -1,0 +1,248 @@
+<script setup lang="ts">
+import $ from 'jquery';
+import DockIcon from './DockIcon.vue';
+$(document).on('ready', function(){
+	$("ul.osx-dock li").each(function () {
+		$(this).hover(function () {
+			$(this).prev("li").addClass("nearby");
+			$(this).next("li").addClass("nearby");
+		},
+			function () {
+				$(this).prev("li").removeClass("nearby");
+				$(this).next("li").removeClass("nearby");
+			});
+	});
+});
+
+interface dockIconInfo {
+    title: string, 
+    imgSrc: string, 
+    link: string, 
+    id: string
+} 
+
+let dockIcons:dockIconInfo[] = [
+    {
+        title: "Facebook",
+        imgSrc: "fblogo.png",
+        link: "https://fb.com", 
+        id: "fb"
+    },
+    {
+        title: "Messenger",
+        imgSrc: "msngr.png",
+        link: "https://messenger.com",
+        id: "m"
+    },
+    {
+        title: "Plex",
+        imgSrc: "plex.png",
+        link: "https://plex.joshwolfe.ca",
+        id: "pl"
+    },
+    {
+        title: "Whatsapp",
+        imgSrc: "whatsapp.png",
+        link: "https://web.whatsapp.com",
+        id: "wa"
+    },
+    {
+        title: "YouTube",
+        imgSrc: "yt.png",
+        link: "https://youtube.com",
+        id: "yt"
+    },
+    {
+        title: "LinkedIn",
+        imgSrc: "linkedin.png",
+        link: "https://linkedin.com",
+        id: "li"
+    },
+    {
+        title: "Github",
+        imgSrc: "github.png",
+        link: "https://github.com",
+        id: "gh"
+    },
+    {
+        title: "Travis",
+        imgSrc: "travis.png",
+        link: "https://travis-ci.com",
+        id: "tci"
+    },
+    {
+        title: "Drive",
+        imgSrc: "drive.png",
+        link: "https://drive.google.com",
+        id: "gd"
+    },
+    {
+        title: "Gmail",
+        imgSrc: "gmail.png",
+        link: "https://gmail.com",
+        id: "gm"
+    },
+    {
+        title: "Google Calendar",
+        imgSrc: "calendar.png",
+        link: "https://calendar.google.com",
+        id: "gc"
+    },
+    {
+        title: "UWaterloo Mail",
+        imgSrc: "mail.png",
+        link: "https://connect.uwaterloo.ca",
+        id: "uwm"
+    },
+    {
+        title: "Quest",
+        imgSrc: "uwaterloo.png",
+        link: "https://quest.pecs.uwaterloo.ca/psp/SS/ACADEMIC/SA/?cmd=login",
+        id: "q"
+    },
+    {
+        title: "Overleaf",
+        imgSrc: "overleaf.png",
+        link: "https://overleaf.com",
+        id: "ol"
+    },
+    {
+        title: "Docker Hub",
+        imgSrc: "docker-hub.png",
+        link: "https://hub.docker.com",
+        id: "dh"
+    },
+
+
+
+]
+</script>
+
+<template>
+<div id="dockContainer">
+    <ul class="osx-dock">
+        <li v-for="item in dockIcons">
+            <DockIcon :img-src="'/src/assets/logos/' + item.imgSrc" :link="item.link" :id="item.id" :title="item.title"/>
+        </li>
+    </ul>
+</div>
+</template>
+
+<style lang="scss">
+#osxdock-page {
+    color: #fff;
+    padding-bottom: 2em;
+    margin-bottom: -2em;
+    h1,h2 {
+        color: #fff;
+    }
+}
+
+div.cap {
+    display: block;
+    height: 100px;
+    width: 40px;
+    .left {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+    }
+    .right {
+        background-position: right bottom;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+    }
+}
+
+ul.osx-dock {
+    display: inline-block;
+    height: 130px;
+    padding: 0 40px 0 0;
+    overflow: hidden;
+    margin: 0 0 0 40px;
+    li {
+        display: block;
+        position: relative;
+        float: left;
+        width: 50px;
+        height: 50px;
+        margin: 60px 0 4px 0;
+        -webkit-transition: 0.15s linear;
+        -webkit-transition-property: -webkit-transform margin;
+        text-align: center;
+        &:hover {
+            margin-left: 9px;
+            margin-right: 9px;
+            z-index: 200;
+            a {
+                -webkit-transform-origin: center bottom;
+                -webkit-transform: scale(1.5);
+            }
+            span {
+                display: block;
+            }
+        }
+        .nearby {
+            margin-left: 6px;
+            margin-right: 6px;
+            z-index: 100;
+            a {
+                -webkit-transform-origin: center bottom;
+                -webkit-transform: scale(1.25);
+            }
+        }
+        a {
+            display: block;
+            height: 50px;
+            padding: 0 1px;
+            -webkit-transition: 0.15s linear;
+            -webkit-transition-property: -webkit-transform margin;
+            margin: 0;
+            -webkit-box-reflect: below 2px -webkit-gradient(linear,left top,left bottom,from(transparent),color-stop(0.45,transparent),to(rgba(255,255,255,0.25)));
+            img {
+                width: 48px;
+            }
+        }
+        span {
+            background: rgba(0,0,0,0.75);
+            position: absolute;
+            bottom: 80px;
+            margin: 0 auto;
+            display: none;
+            width: auto;
+            font-size: 11px;
+            font-weight: bold;
+            padding: 3px 6px;
+            -webkit-border-radius: 6px;
+            color: #fff;
+        }
+    }
+}
+
+div#dockContainer {
+        position: fixed;
+        bottom: 12px;
+        height: 120px;
+        padding: 50px 0 0;
+        text-align: center;
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        width: 100%;
+        line-height: 1;
+        z-index: 100;
+}
+
+#dockContainer,#dockContainer * {
+        -webkit-box-sizing: content-box;
+        -moz-box-sizing: content-box;
+        box-sizing: content-box;
+}
+
+.icons {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform:translate(-50%, 0%);
+}
+</style>

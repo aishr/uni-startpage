@@ -9,10 +9,4 @@ import HomeVue from './components/Home.vue';
 </template>
 
 <style lang="scss">
-  html {
-    background: no-repeat center center fixed;
-    background-size: cover;
-    background-repeat: repeat-y;
-    background-color: #000000;
-  }
 </style>
