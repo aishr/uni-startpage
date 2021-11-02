@@ -21,4 +21,63 @@
 </template>
 
 <style lang="scss">
+h2 {
+        font: 400 45px/1.5 Helvetica, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        color: white;
+        text-shadow: 4px 4px 5px gray;
+}
+
+.topul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        color: white;
+}
+
+.topli {
+        font: 200 30px/1.5 Helvetica, Verdana, sans-serif;
+        border-bottom: 1px solid #ccc;
+        color: white;
+        text-shadow: 4px 4px 5px gray;
+}
+
+.topli:last-child {
+        border: none;
+        color: white;
+        text-shadow: 4px 4px 5px gray;
+}
+
+.topli a {
+        text-decoration: none;
+        color: white;
+        text-shadow: 4px 4px 5px gray;
+        -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+        -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
+        -o-transition: font-size 0.3s ease, background-color 0.3s ease;
+        -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+        transition: font-size 0.3s ease, background-color 0.3s ease;
+        display: block;
+}
+
+.topli a:hover{
+        font-size: 40px;
+}	
+
+.underul {
+        list-style-type: none;
+        display: block;
+        font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
+}
+
+.underli a {
+        color:white;
+        text-shadow: 4px 4px 5px gray;
+}
+
+.underli a:hover {
+    font-size: 25px;
+}
+
 </style>
