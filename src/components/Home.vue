@@ -4,20 +4,6 @@ import MarksVue from './Marks.vue';
 import DockVue from './Dock.vue';
 import TimeAndDay from './TimeAndDay.vue';
 import Search from './Search.vue';
-$(document).ready(function(){
-    $('#TextBoxId').keypress(function(e){
-      if(e.keyCode==13)
-      $('#search_submit').click();
-    });
-});
-
-window.onkeydown = function (e) {
-    e = e || window.event || {};
-    var charCode = e.charCode || e.keyCode || e.which;
-    if(charCode >= 65 && charCode <= 90 || charCode >= 48 && charCode <= 57) {
-            $('#search').focus();
-    }
-}
 function getRandomInt(max:number) {
     return (Math.floor(Math.random() * Math.floor(max))) + 1;
 }
