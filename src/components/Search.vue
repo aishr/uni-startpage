@@ -1,8 +1,5 @@
-<script lang="ts">
+<script setup lang="ts">
 import $ from 'jquery';
-$refs!: {
-    search: HTMLFormElement
-  };
 $(document).ready(function(){
     $('#TextBoxId').keypress(function(e){
       if(e.keyCode==13)
@@ -10,15 +7,6 @@ $(document).ready(function(){
     });
 });
 
-window.onkeydown = function (e) {
-    e = e || window.event || {};
-    console.log(e);
-    var char = e.key.toLowerCase();
-    let isLetter = char >= "a" && char <= "z";
-    let isNumber = char >= "0" && char <= "9";
-    if(isLetter || isNumber) {
-    }
-}
 var config = {
     links: [
         {key: "marks", url: "https://docs.google.com/spreadsheets/d/1xVwISSWXJJKRenIa2uEx2CcAih7aZF1dAVuTif9UvTs/edit?usp=sharing"},
@@ -90,7 +78,7 @@ function goThroughOptions(input, lst){
 <template>
     <div class="wrap">
       <form onsubmit="window.location.href = get_url(); return false;" autocomplete="on">
-        <input ref="search" id="search" name="search" type="text" placeholder="Search Here!"/>
+        <input ref="search" id="search" v-model="search" name="search" type="text" placeholder="Search Here!"/>
         <input id="search_submit" value="Search" type="search">
         <input id="submit" value="Submit" type="submit">
       </form>
