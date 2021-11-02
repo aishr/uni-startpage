@@ -1,12 +1,16 @@
 <script setup lang="ts">
 import $ from 'jquery';
-$(document).ready(function(){
-    $('#TextBoxId').keypress(function(e){
-      if(e.keyCode==13)
-      $('#search_submit').click();
-    });
-});
+import { ref } from 'vue';
+const search = ref<HTMLInputElement>();
+const searchSubmit = ref<HTMLInputElement>();
 
+window.onkeydown = function (e) {
+    e = e || window.event || {};
+    var charCode = e.charCode || e.keyCode || e.which;
+    if(charCode >= 65 && charCode <= 90 || charCode >= 48 && charCode <= 57) {
+      search.value?.focus();
+    }
+}
 var config = {
     links: [
         {key: "marks", url: "https://docs.google.com/spreadsheets/d/1xVwISSWXJJKRenIa2uEx2CcAih7aZF1dAVuTif9UvTs/edit?usp=sharing"},
@@ -47,9 +51,18 @@ var config = {
         protocolRegex: /^[a-zA-Z]+:\/\//i
     }
 };
-function get_url()
+
+function goToUrl(e:Event) {
+    e.preventDefault();
+    let input = search.value?.value;
+    if (!input){
+      return;
+    }
+    window.location.href = getUrl(input);
+
+}
+function getUrl(input: string)
 {
-    var input = document.getElementById("search").value;
     if (input.match(config.extras.urlRegex)){
         return input.match(config.extras.protocolRegex) ? input : "http://" + input;
     }
@@ -77,9 +90,9 @@ function goThroughOptions(input, lst){
 
 <template>
     <div class="wrap">
-      <form onsubmit="window.location.href = get_url(); return false;" autocomplete="on">
-        <input ref="search" id="search" v-model="search" name="search" type="text" placeholder="Search Here!"/>
-        <input id="search_submit" value="Search" type="search">
+      <form @submit="goToUrl" autocomplete="on">
+        <input ref="search" id="search" name="search" type="text" placeholder="Search Here!"/>
+        <input ref="searchSubmit" id="search_submit" value="Search" type="search">
         <input id="submit" value="Submit" type="submit">
       </form>
     </div>

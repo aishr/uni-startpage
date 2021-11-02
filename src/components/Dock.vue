@@ -1,19 +1,6 @@
 <script setup lang="ts">
 import $ from 'jquery';
 import DockIcon from './DockIcon.vue';
-$(document).on('ready', function(){
-	$("ul.osx-dock li").each(function () {
-		$(this).hover(function () {
-			$(this).prev("li").addClass("nearby");
-			$(this).next("li").addClass("nearby");
-		},
-			function () {
-				$(this).prev("li").removeClass("nearby");
-				$(this).next("li").removeClass("nearby");
-			});
-	});
-});
-
 interface dockIconInfo {
     title: string, 
     imgSrc: string, 
@@ -183,15 +170,6 @@ ul.osx-dock {
                 display: block;
             }
         }
-        .nearby {
-            margin-left: 6px;
-            margin-right: 6px;
-            z-index: 100;
-            a {
-                -webkit-transform-origin: center bottom;
-                -webkit-transform: scale(1.25);
-            }
-        }
         a {
             display: block;
             height: 50px;
@@ -200,6 +178,15 @@ ul.osx-dock {
             -webkit-transition-property: -webkit-transform margin;
             margin: 0;
             -webkit-box-reflect: below 2px -webkit-gradient(linear,left top,left bottom,from(transparent),color-stop(0.45,transparent),to(rgba(255,255,255,0.25)));
+            .nearby {
+                margin-left: 6px;
+                margin-right: 6px;
+                z-index: 100;
+                a {
+                    -webkit-transform-origin: center bottom;
+                    -webkit-transform: scale(1.25);
+                }
+            }
             img {
                 width: 48px;
             }

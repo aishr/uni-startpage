@@ -4,6 +4,7 @@ import MarksVue from './Marks.vue';
 import DockVue from './Dock.vue';
 import TimeAndDay from './TimeAndDay.vue';
 import Search from './Search.vue';
+import QuickLinks from './QuickLinks.vue';
 function getRandomInt(max:number) {
     return (Math.floor(Math.random() * Math.floor(max))) + 1;
 }
@@ -17,6 +18,7 @@ var image: string = `url(/src/assets/backgrounds/cat${getRandomInt(maxBackground
   <MarksVue/>
   <DockVue/>
   <TimeAndDay/>
+  <QuickLinks/>
 </template>
 
 <style lang="scss">

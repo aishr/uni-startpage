@@ -11,7 +11,10 @@ defineProps<{
 </script>
 
 <template>
-    <a :href="link"> <img :title="title" :src="imgSrc" :alt="id" align="left" class="dockIcon"/> <div class="centered">{{ id }}</div></a>
+    <a :href="link"> 
+        <img :title="title" :src="imgSrc" :alt="id" align="left" class="dockIcon"/> 
+        <div class="centered">{{ id }}</div>
+    </a>
 </template>
 <style lang="scss">
     .dockIcon {
