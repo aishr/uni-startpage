@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import $ from 'jquery';
 import MarksVue from './Marks.vue';
 import DockVue from './Dock.vue';
 import TimeAndDay from './TimeAndDay.vue';
@@ -9,16 +8,17 @@ function getRandomInt(max:number) {
     return (Math.floor(Math.random() * Math.floor(max))) + 1;
 }
 let maxBackground:number = 50;
-var image: string = `url(/src/assets/backgrounds/cat${getRandomInt(maxBackground)}.jpg)`;
+let image: string = `url(/src/assets/backgrounds/cat${getRandomInt(maxBackground)}.jpg)`;
 </script>
 
 <template>
-  <div class="bg" :style="{'background-image':image}"></div>
+  <div class="bg" :style="{'background-image':image}">
+  <QuickLinks/>
   <Search/>
   <MarksVue/>
   <DockVue/>
   <TimeAndDay/>
-  <QuickLinks/>
+  </div>
 </template>
 
 <style lang="scss">
