@@ -123,6 +123,7 @@ input[type="text"] {
         z-index: 3;
         transition: width .4s cubic-bezier(0.000, 0.795, 0.000, 1.000);
         cursor: pointer;
+        background-color: rgba(0,0,0,0.3);
         &:focus {
         width: 400px;
         z-index: 1;

@@ -3,24 +3,38 @@
 
 <template>
     <div class="listdiv">
-      <h2>TAing</h2>
+      <h2>Cases</h2>
       <ul class="topul">
         <li class="topli">
-            <a href="https://www.student.cs.uwaterloo.ca/~se463/"><div class="textLabels">463</div>CS 463</a>
-            <ul class="underul">
-               <li class="underli">
-                 <a href="https://campuswire.com/c/G6A5F90C2/"><div class="textLabels">463cw</div>Campuswire</a>
-               </li>
-               <li class="underli">
-                 <a href="https://piazza.com/class/k9ta27cqmme6dn"><div class="textLabels">463pi</div>Piazza</a>
-               </li>
-            </ul>
+            <a href="sans/"><div class="textLabels">s</div>SANS</a>
+        </li>
+        <li class="topli">
+            <a href="go/sfstory"><div class="textLabels">sf</div>SfStory</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="listdiv">
+      <h2>Cases</h2>
+      <ul class="topul">
+        <li class="topli">
+            <a href="sans/"><div class="textLabels">s</div>SANS</a>
+        </li>
+        <li class="topli">
+            <a href="go/sfstory"><div class="textLabels">sf</div>SfStory</a>
         </li>
       </ul>
     </div>
 </template>
 
 <style lang="scss">
+.listdiv {
+        width: 300px;
+        margin: 30px;
+        display: inline-block;
+        vertical-align: top;
+        background-color: rgba(0,0,0,0.3);
+}
 h2 {
         font: 400 45px/1.5 Helvetica, Verdana, sans-serif;
         margin: 0;
@@ -78,6 +92,18 @@ h2 {
 
 .underli a:hover {
     font-size: 25px;
+}
+.textLabels {
+    display: inline-block;
+    background-color: black;
+    border: 1px solid white;
+    font-size: 10px;
+    margin-right: 5px;
+    padding: 6px 6px 0px 6px;
+    text-align: center;
+    vertical-align: middle;
+    line-height:8px;
+    height: 13px;
 }
 
 </style>

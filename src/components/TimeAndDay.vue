@@ -1,7 +1,5 @@
 
 <script setup lang="ts">
-import { defineComponent } from '@vue/runtime-core';
-import { data } from 'jquery';
 function clock() {// We create a new Date object and assign it to a variable called "time".
     var daysOfTheWeek = {
         0 : "Sunday",

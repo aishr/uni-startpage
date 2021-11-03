@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import $ from 'jquery';
 import DockIcon from './DockIcon.vue';
 interface dockIconInfo {
     title: string, 
