@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import DockIcon from './DockIcon.vue';
+import dockIcons from './DockData';
 interface dockIconInfo {
     title: string, 
     imgSrc: string, 
@@ -7,101 +8,7 @@ interface dockIconInfo {
     id: string
 } 
 
-let dockIcons:dockIconInfo[] = [
-    {
-        title: "Facebook",
-        imgSrc: "fblogo.png",
-        link: "https://fb.com", 
-        id: "fb"
-    },
-    {
-        title: "Messenger",
-        imgSrc: "msngr.png",
-        link: "https://messenger.com",
-        id: "m"
-    },
-    {
-        title: "Plex",
-        imgSrc: "plex.png",
-        link: "https://plex.joshwolfe.ca",
-        id: "pl"
-    },
-    {
-        title: "Whatsapp",
-        imgSrc: "whatsapp.png",
-        link: "https://web.whatsapp.com",
-        id: "wa"
-    },
-    {
-        title: "YouTube",
-        imgSrc: "yt.png",
-        link: "https://youtube.com",
-        id: "yt"
-    },
-    {
-        title: "LinkedIn",
-        imgSrc: "linkedin.png",
-        link: "https://linkedin.com",
-        id: "li"
-    },
-    {
-        title: "Github",
-        imgSrc: "github.png",
-        link: "https://github.com",
-        id: "gh"
-    },
-    {
-        title: "Travis",
-        imgSrc: "travis.png",
-        link: "https://travis-ci.com",
-        id: "tci"
-    },
-    {
-        title: "Drive",
-        imgSrc: "drive.png",
-        link: "https://drive.google.com",
-        id: "gd"
-    },
-    {
-        title: "Gmail",
-        imgSrc: "gmail.png",
-        link: "https://gmail.com",
-        id: "gm"
-    },
-    {
-        title: "Google Calendar",
-        imgSrc: "calendar.png",
-        link: "https://calendar.google.com",
-        id: "gc"
-    },
-    {
-        title: "UWaterloo Mail",
-        imgSrc: "mail.png",
-        link: "https://connect.uwaterloo.ca",
-        id: "uwm"
-    },
-    {
-        title: "Quest",
-        imgSrc: "uwaterloo.png",
-        link: "https://quest.pecs.uwaterloo.ca/psp/SS/ACADEMIC/SA/?cmd=login",
-        id: "q"
-    },
-    {
-        title: "Overleaf",
-        imgSrc: "overleaf.png",
-        link: "https://overleaf.com",
-        id: "ol"
-    },
-    {
-        title: "Docker Hub",
-        imgSrc: "docker-hub.png",
-        link: "https://hub.docker.com",
-        id: "dh"
-    },
 
-
-
-]
 </script>
 
 <template>

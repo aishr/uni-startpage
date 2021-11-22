@@ -1,6 +1,7 @@
 <script setup lang="ts">
 </script>
 
+<!--
 <template>
     <div class="listdiv">
       <h2>Cases</h2>
@@ -26,6 +27,7 @@
       </ul>
     </div>
 </template>
+-->
 
 <style lang="scss">
 .listdiv {
