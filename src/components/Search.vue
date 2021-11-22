@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import $ from 'jquery';
 import { ref } from 'vue';
+import dockIcons from './DockData';
 const search = ref<HTMLInputElement>();
 const searchSubmit = ref<HTMLInputElement>();
 
@@ -12,40 +12,6 @@ window.onkeydown = function (e) {
     }
 }
 var config = {
-    links: [
-        {key: "marks", url: "https://docs.google.com/spreadsheets/d/1xVwISSWXJJKRenIa2uEx2CcAih7aZF1dAVuTif9UvTs/edit?usp=sharing"},
-        {key: "463", url: "https://www.student.cs.uwaterloo.ca/~se463/"},
-        {key: "463cw", url: "https://campuswire.com/c/G6A5F90C2/"},
-        {key: "463pi", url: "https://piazza.com/class/k9ta27cqmme6dn"}
- ],
-    dock: [
-        {key: "fb", url: "https://www.facebook.com/"},
-        {key: "m", url: "https://www.messenger.com"},
-        {key: "wa", url: "https://web.whatsapp.com/"},
-        {key: "i", url: "https://www.instagram.com/"},
-        {key: "yt", url: "https://www.youtube.com/", search: "results?search_query="},
-        {key: "pl", url: "https://app.plex.tv", search: "#!/search?query="},
-        {key: "dh", url: "https://hub.docker.com", search: "/search?q="},
-        {key: "t", url: "https://www.tumblr.com/"},
-        {key: "li", url: "https://www.linkedin.com/"},
-        {key: "gh", url: "https://github.com/", search: "search?q="},
-        {key: "tci", url: "https://travis-ci.com/", search: "search/"},
-        {key: "gd", url: "https://drive.google.com/", search: "drive/search?q="},
-        {key: "gm", url: "https://mail.google.com/", search: "mail/u/0/#search/"},
-        {key: "gc", url: "https://calendar.google.com/"},
-        {key: "an", url: "https://notebooks.azure.com/"},
-        {key: "tt", url: "https://www.twitter.com/"},
-        {key: "s", url: "https://play.spotify.com/"},
-        {key: "q", url: "https://quest.pecs.uwaterloo.ca/psp/SS/ACADEMIC/SA/?cmd=login"},
-        {key: "ol", url: "https://www.overleaf.com/"},
-        {key: "a", url: "https://acorn.utoronto.ca/"},
-        {key: "utm", url: "https://mail.utoronto.ca/"},
-        {key: "uwm", url: "https://connect.uwaterloo.ca/"},
-        {key: "pi", url: "https://piazza.com/"},
-        {key: "atp", url: "https://portal.accommod8u.com/tp_acc/Login.php"},
-        {key: "aws", url: "https://console.aws.amazon.com/console/home"},
-        {key: "l", url: "https://learn.uwaterloo.ca"}
-    ],
     extras: {
         urlRegex: /^(?:(http|https)?:\/\/)?(?:[\w-]+\.)+([a-z]|[A-Z]|[0-9]){2,6}/i,
         protocolRegex: /^[a-zA-Z]+:\/\//i
@@ -66,25 +32,13 @@ function getUrl(input: string)
     if (input.match(config.extras.urlRegex)){
         return input.match(config.extras.protocolRegex) ? input : "http://" + input;
     }
-    var test = goThroughOptions(input, config.links);
-    if (test != false) return test;
-    var test = goThroughOptions(input, config.dock);
-    if (test != false) return test;
+    console.log(input);
+    var test = dockIcons[input].link;
+    console.log(test);
+    if (test != undefined) return test;
     return "https://google.com/search?q=" + encodeURIComponent(input);
 }
 
-function goThroughOptions(input, lst){
-    var split = input.split(":")
-    for (var i = 0; i < lst.length; i++){
-        if (split[0] != input && split[0] === lst[i].key){
-            return lst[i].url + lst[i].search + encodeURIComponent(split[1])
-        }
-        if (input === lst[i].key){
-            return lst[i].url;
-        }
-    }
-    return false;
-}
 
 </script>
 
