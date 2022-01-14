@@ -1,13 +1,6 @@
 <script setup lang="ts">
 import DockIcon from './DockIcon.vue';
 import dockIcons from './DockData';
-interface dockIconInfo {
-    title: string, 
-    imgSrc: string, 
-    link: string, 
-    id: string
-} 
-
 
 </script>
 
@@ -15,7 +8,11 @@ interface dockIconInfo {
 <div id="dockContainer">
     <ul class="osx-dock">
         <li v-for="item in dockIcons">
-            <DockIcon :img-src="'/src/assets/logos/' + item.imgSrc" :link="item.link" :id="item.id" :title="item.title"/>
+            <DockIcon 
+            :img-src="'/src/assets/logos/' + item.imgSrc"
+            :link="item.link"
+            :id="item.id"
+            :title="item.title"/>
         </li>
     </ul>
 </div>

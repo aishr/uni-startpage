@@ -2,10 +2,11 @@ interface DockIcon {
     title: string,
     imgSrc: string,
     link: string,
-    id: string
+    id: string, 
+    search?: string
 }
 
-const dockIcons:Record<string,DockIcon> = {
+const dockIcons:Record<string, DockIcon> = {
     fb: {
         title: "Facebook",
         imgSrc: "fblogo.png",
@@ -22,7 +23,8 @@ const dockIcons:Record<string,DockIcon> = {
         title: "Plex",
         imgSrc: "plex.png",
         link: "https://plex.joshwolfe.ca",
-        id: "pl"
+        id: "pl",
+        search: "#!/search?query="
     },
     wa: {
         title: "Whatsapp",
@@ -34,7 +36,8 @@ const dockIcons:Record<string,DockIcon> = {
         title: "YouTube",
         imgSrc: "yt.png",
         link: "https://youtube.com",
-        id: "yt"
+        id: "yt",
+        search: "results?search_query=" 
     },
     li: {
         title: "LinkedIn",
@@ -46,25 +49,29 @@ const dockIcons:Record<string,DockIcon> = {
         title: "Github",
         imgSrc: "github.png",
         link: "https://github.com",
-        id: "gh"
+        id: "gh",
+        search: "search?q="
     },
     tci: {
         title: "Travis",
         imgSrc: "travis.png",
         link: "https://travis-ci.com",
-        id: "tci"
+        id: "tci",
+        search: "search/"
     },
     gd: {
         title: "Drive",
         imgSrc: "drive.png",
         link: "https://drive.google.com",
-        id: "gd"
+        id: "gd",
+        search: "drive/search?q="
     },
     gm: {
         title: "Gmail",
         imgSrc: "gmail.png",
         link: "https://gmail.com",
-        id: "gm"
+        id: "gm",
+        search: "mail/u/0/#search/"
     },
     gc: {
         title: "Google Calendar",
@@ -94,7 +101,8 @@ const dockIcons:Record<string,DockIcon> = {
         title: "Docker Hub",
         imgSrc: "docker-hub.png",
         link: "https://hub.docker.com",
-        id: "dh"
+        id: "dh",
+        search: "/search?q="
     },
 }
 
