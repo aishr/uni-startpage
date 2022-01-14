@@ -1,16 +1,13 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { onMounted, ref } from 'vue';
 import dockIcons from './DockData';
 const search = ref<HTMLInputElement>();
 const searchSubmit = ref<HTMLInputElement>();
 
-window.onkeydown = function (e) {
-    e = e || window.event || {};
-    var charCode = e.charCode || e.keyCode || e.which;
-    if(charCode >= 65 && charCode <= 90 || charCode >= 48 && charCode <= 57) {
-      search.value?.focus();
-    }
-}
+onMounted(() => {
+  search.value?.focus();
+});
+
 var config = {
     extras: {
         urlRegex: /^(?:(http|https)?:\/\/)?(?:[\w-]+\.)+([a-z]|[A-Z]|[0-9]){2,6}/i,
@@ -32,14 +29,20 @@ function getUrl(input: string)
     if (input.match(config.extras.urlRegex)){
         return input.match(config.extras.protocolRegex) ? input : "http://" + input;
     }
-    console.log(input);
-    var test = dockIcons[input].link;
-    console.log(test);
-    if (test != undefined) return test;
-    return "https://google.com/search?q=" + encodeURIComponent(input);
+    let potentialLink = goThroughOptions(input);
+    return potentialLink ? potentialLink : "https://google.com/search?q=" + encodeURIComponent(input);
 }
 
+function goThroughOptions(input: string){
+  let cleanInput = input.trim();
+  let splitForSearch = cleanInput.split(":");
+  let cleanId = splitForSearch[0].trim();
+  if (splitForSearch.length == 1){
+    return cleanId in dockIcons ? dockIcons[cleanId].link : false;
 
+  }
+  return dockIcons[cleanId].link + "/" + dockIcons[cleanId].search + encodeURIComponent(splitForSearch[1]);
+}
 </script>
 
 <template>

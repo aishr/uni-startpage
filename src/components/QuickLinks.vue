@@ -1,8 +1,8 @@
 <script setup lang="ts">
 </script>
 
-<!--
 <template>
+<!--
     <div class="listdiv">
       <h2>Cases</h2>
       <ul class="topul">
@@ -26,8 +26,8 @@
         </li>
       </ul>
     </div>
-</template>
 -->
+</template>
 
 <style lang="scss">
 .listdiv {
@@ -57,44 +57,40 @@ h2 {
         border-bottom: 1px solid #ccc;
         color: white;
         text-shadow: 4px 4px 5px gray;
-}
-
-.topli:last-child {
-        border: none;
-        color: white;
-        text-shadow: 4px 4px 5px gray;
-}
-
-.topli a {
-        text-decoration: none;
-        color: white;
-        text-shadow: 4px 4px 5px gray;
-        -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
-        -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
-        -o-transition: font-size 0.3s ease, background-color 0.3s ease;
-        -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
-        transition: font-size 0.3s ease, background-color 0.3s ease;
-        display: block;
-}
-
-.topli a:hover{
-        font-size: 40px;
+        &:last-child {
+                border: none;
+                color: white;
+                text-shadow: 4px 4px 5px gray;
+        }
+        a {
+                text-decoration: none;
+                color: white;
+                text-shadow: 4px 4px 5px gray;
+                -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+                -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
+                -o-transition: font-size 0.3s ease, background-color 0.3s ease;
+                -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+                transition: font-size 0.3s ease, background-color 0.3s ease;
+                display: block;
+                :hover{
+                        font-size: 40px;
+                }
+        }
 }	
 
 .underul {
         list-style-type: none;
         display: block;
         font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
+        a {
+                color:white;
+                text-shadow: 4px 4px 5px gray;
+                &:hover {
+                        font-size: 25px;
+                }
+        }
 }
 
-.underli a {
-        color:white;
-        text-shadow: 4px 4px 5px gray;
-}
-
-.underli a:hover {
-    font-size: 25px;
-}
 .textLabels {
     display: inline-block;
     background-color: black;
