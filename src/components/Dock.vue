@@ -9,7 +9,7 @@ import dockIcons from './DockData';
     <ul class="osx-dock">
         <li v-for="item in dockIcons">
             <DockIcon 
-            :img-src="'/src/assets/logos/' + item.imgSrc"
+            :img-src="'/assets/logos/' + item.imgSrc"
             :link="item.link"
             :id="item.id"
             :title="item.title"/>

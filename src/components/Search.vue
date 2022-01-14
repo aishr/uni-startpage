@@ -99,7 +99,7 @@ input[type="search"] {
         display: inline-block;
         color:red;
         float: right;
-        background: url(/src/assets/search.png) center center no-repeat;
+        background: url(/assets/search.png) center center no-repeat;
         background-size: 80% auto;
         text-indent: -10000px;
         border: none;
@@ -122,7 +122,7 @@ input[type="submit"] {
         display: inline-block;
         color:red;
         float: right;
-        background: url(/src/assets/arrow.png) center center no-repeat;
+        background: url(/assets/arrow.png) center center no-repeat;
         background-size: 80% auto;
         text-indent: -10000px;
         border: none;
