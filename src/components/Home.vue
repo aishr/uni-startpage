@@ -8,7 +8,7 @@ function getRandomInt(max:number) {
     return (Math.floor(Math.random() * Math.floor(max))) + 1;
 }
 let maxBackground:number = 50;
-let image: string = `url(/assets/backgrounds/cat${getRandomInt(maxBackground)}.jpg)`;
+let image: string = `url(${import.meta.env.BASE_URL}assets/backgrounds/cat${getRandomInt(maxBackground)}.jpg)`;
 </script>
 
 <template>

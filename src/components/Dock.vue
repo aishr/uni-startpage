@@ -2,6 +2,8 @@
 import DockIcon from './DockIcon.vue';
 import dockIcons from './DockData';
 
+let imgFolder = import.meta.env.BASE_URL + 'assets/logos/';
+
 </script>
 
 <template>
@@ -9,7 +11,7 @@ import dockIcons from './DockData';
     <ul class="osx-dock">
         <li v-for="item in dockIcons">
             <DockIcon 
-            :img-src="'/assets/logos/' + item.imgSrc"
+            :img-src="imgFolder + item.imgSrc"
             :link="item.link"
             :id="item.id"
             :title="item.title"/>
