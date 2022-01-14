@@ -4,7 +4,7 @@
 <template>
   <div class="marks">
     <a href="https://docs.google.com/spreadsheets/d/1xVwISSWXJJKRenIa2uEx2CcAih7aZF1dAVuTif9UvTs/edit?usp=sharing">
-      <img className="troll" title="Marks" src="./../assets/trollface.png" alt="marks"/>
+      <img className="troll" title="Marks" src="/assets/trollface.png" alt="marks"/>
     </a>
   </div>
 </template>
