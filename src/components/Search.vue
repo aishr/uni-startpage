@@ -5,7 +5,9 @@ const search = ref<HTMLInputElement>();
 const searchSubmit = ref<HTMLInputElement>();
 
 onMounted(() => {
-  search.value?.focus();
+  window.addEventListener('keydown', (e) => {
+    search.value?.focus();
+  })
 });
 
 var config = {
