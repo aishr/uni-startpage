@@ -104,6 +104,18 @@ const dockIcons:Record<string, DockIcon> = {
         id: "dh",
         search: "/search?q="
     },
+    mj: {
+        title: "Mahjong",
+        imgSrc: "redd.png",
+        link: "https://mahjongsoul.game.yo-star.com/",
+        id: "mj"
+    },
+    mcs: {
+        title: "Mahjong Cheat Sheet",
+        imgSrc: "redd.png",
+        link: "https://static1.squarespace.com/static/5834cfa4f5e231d203fec0cb/t/5e3071640f08f8258f06f507/1580233130554/WRC_Yaku_1_5_3.pdf",
+        id: "mcs"
+    },
 }
 
 export default dockIcons;
